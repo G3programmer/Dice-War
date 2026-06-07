@@ -12,18 +12,18 @@ require_once __DIR__ . '/classes/wizard.php';
 require_once __DIR__ . '/classes/archer.php';
 function menuCharacter()
 {
-  list($name1, $name2) = declarePlayer();
-  $choice1 = loopSelection($name1);
-  // Transforma o número no objeto correspondente (personagem)
-  $characterPlayer1 = createCharacterInstance($choice1);
+    list($name1, $name2) = declarePlayer();
+    $choice1 = loopSelection($name1);
+    // Transforma o número no objeto correspondente (personagem)
+    $characterPlayer1 = createCharacterInstance($choice1);
 
-  $choice2 = loopSelection($name2);
-  $characterPlayer2 = createCharacterInstance($choice2);
+    $choice2 = loopSelection($name2);
+    $characterPlayer2 = createCharacterInstance($choice2);
 
-  $player1 = new Player($name1, $characterPlayer1);
-  $player2 = new Player($name2, $characterPlayer2);
+    $player1 = new Player($name1, $characterPlayer1);
+    $player2 = new Player($name2, $characterPlayer2);
 
-  return [$player1, $player2];
+    return [$player1, $player2];
 }
 
 function createCharacterInstance($choice)

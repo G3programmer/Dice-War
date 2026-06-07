@@ -61,13 +61,13 @@ function fight(Player $player1, Player $player2)
                         case '3':
                             $char = $activePlayer->getCharacter();
                             $custoMana = $char->getSpecialSkillCost();
-                           if ($char->getMana() >= $custoMana) {
+                            if ($char->getMana() >= $custoMana) {
                                 $skillLog = $activePlayer->getCharacter()->specialSkill($opponent->getCharacter());
                                 $logs[] = "{$activePlayer->getName()} usou habilidade! (Custo: $custoMana MP) - $skillLog";
                                 $validAction = true;
                             } else {
                                 $logs[] = "Mana insuficiente! Você precisa de {$custoMana} MP.";
-                               
+
                                 renderHeader($turn, $player1, $player2, $activePlayer);
                                 logBattle($logs);
                                 $validAction = false;

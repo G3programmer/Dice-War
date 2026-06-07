@@ -53,7 +53,7 @@ Certifica-te de que tens o PHP instalado no teu ambiente técnico (CLI).
    ```
 2. Navega até a pasta do projeto:
    ```bash
-   cd dice-war/public/
+   cd dice-war
    ```
 3. Executa o arquivo principal do jogo:
     ```bash
