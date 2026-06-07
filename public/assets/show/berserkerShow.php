@@ -1,8 +1,7 @@
 <?php
-function berserkerShow()
+function berserkerShow(Character $character)
 {
-echo "[1] - Berserker\n";
-echo "                              I;iiiiIIIiiIIiiI;                     ;II                    
+  echo "                              I;iiiiIIIiiIIiiI;                     ;II                    
                              ,;:.:;lIiiiI<!IiiiI;i;::;         iIll!Il                    
                              I;;lIiliI:l×l;::;I.I<;,ii,      >llll!l<<                    
                               IIi;;:;:i++!i;iIliI;l.:;      >>><ll!ll<<                   
@@ -32,5 +31,11 @@ echo "                              I;iiiiIIIiiIIiiI;                     ;II
                  ;i:   ,;...,,,::::iI<<-×÷>=i-!.  .;iil=-+=-                              
                  i:;.  ,;,    ,,, ,::.!++>i>!I:: ,;;i,Ii!++<×                             
                  II;    ,,.:    : ,I:. >>;,I..,.. :.,,:>!><<                              
-                 i;..    I. ..  :,i..i=+l;  :;i.+...,. ,ll-        \n";
+                 i;..    I. ..  :,i..i=+l;  :;i.+...,. ,ll-        \n\n";
+
+  echo "[1] - " . $character->getClass() . "\n";
+  echo "Descrição: " . $character->getDescription() . "\n";
+  echo "\nVida: " . $character->getHp() . " || Ataque: " . $character->getAttack() .
+    " || Defesa: " . $character->getDefense() . " || Mana: " . $character->getMana() . "\n";
+  echo "\nHabilidade: " . $character->getSkill() . "\n";
 }

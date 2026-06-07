@@ -1,9 +1,8 @@
 <?php
 
-function wizardShow()
+function wizardShow(Character $character)
 {
-  echo "[2] - Wizard\n";
-    echo "                                                  ++lii:                                  
+  echo "                                                  ++lii:                                  
                                              i<+>+><liiiiii;                              
                                           >++>!ll!<!lllI:;:l<!                            
                                         <<<!IIiIIIIIIIi:,,,::!<                           
@@ -35,5 +34,11 @@ function wizardShow()
       -->;l=<l!;I,,,.,,ll<++il--=<l:>i,;!Ill:l:;<l;<:≤√≥>,>!<,÷≥±=;+×;÷=-ll≈              
       :+>lI-<i>!;:,,..:l!l++:<=-->I:>,,!lII,i::!l,l,i∫≤≤≈≈≈÷!:-≠÷:--!×->l:,!÷             
       !><<i>+i!!iI,,,,:l!I+:i>->-<iiI.l!!!:i:,!l,!I;-√∑≈±÷≈≠≈±≈×+>-=<+×>l>+,+×            
-      !<l+l!-Ii!Ii;.,,:!!Il,i<<!->il:;lI!!!;:!!,l<;>>∫≤≠≈÷+iiI!!;i><+>--:+!,+≠ \n";
+      !<l+l!-Ii!Ii;.,,:!!Il,i<<!->il:;lI!!!;:!!,l<;>>∫≤≠≈÷+iiI!!;i><+>--:+!,+≠ \n\n";
+
+  echo "[2] - " . $character->getClass() . "\n";
+  echo "Descrição: " . $character->getDescription() . "\n";
+  echo "\nVida: " . $character->getHp() . " || Ataque: " . $character->getAttack() .
+    " || Defesa: " . $character->getDefense() . " || Mana: " . $character->getMana() . "\n";
+  echo "\nHabilidade: " . $character->getSkill() . "\n";
 }
